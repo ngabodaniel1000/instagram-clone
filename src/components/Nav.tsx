@@ -17,8 +17,8 @@ function Nav() {
         <li><a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faUser} /> <span className="text-lg mt-0">Profile</span></p></a></li> 
       </ul>
       <div className="ml-4 mt-6 flex flex-col gap-5">
-        <p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faThreads}/><span className="text-lg mt-0">Threads</span><span className="bg-red-500 text-[14px] text-center text-white rounded-[50%] w-4 h-[18px] font-bold absolute left-[33px]">5</span></p>
-        <p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faBars}/><span className="text-lg mt-0">More</span></p>
+        <a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faThreads}/><span className="text-lg mt-0">Threads</span><span className="bg-red-500 text-[14px] text-center text-white rounded-[50%] w-4 h-[18px] font-bold absolute left-[33px]">5</span></p></a>
+        <a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faBars}/><span className="text-lg mt-0">More</span></p></a>
       </div>
     </div>
   )
