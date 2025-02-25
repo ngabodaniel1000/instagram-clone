@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { comment } from "postcss";
 import { log } from "console";
+import Followersuggestion from "./Followersuggestion";
 
 function Post() {
     const [showcomment, Setshowcomment] = useState(false)
@@ -18,6 +19,7 @@ function Post() {
             likes: 441,
             avatar: "/images/portfolio.jpg",
             image: "https://i.ytimg.com/vi/ZzjrcW3QD8Y/maxresdefault.jpg",
+            showcommentsection: true,
             description: "Mikel Arteta says his team feel re-energised after managing to find solutions following Kai Havertz's injury.",
             comments: [{text:"good✅✅",img:"/images/portfolio.jpg"}, {text:"false news",img:"/images/avatar 2.jpg"},{text: "rumors",img:"/images/avatar 3.jpg"}, {text:"it will not work",img:"/images/mum.png"}]
         },
@@ -67,6 +69,8 @@ function Post() {
     ]);
 
     return (
+        <div className="flex gap-40">
+
         <section className="ml-36">
             {/* Map over the posts array */}
             {posts.map((post) => (
@@ -115,7 +119,7 @@ function Post() {
                         <span className="font-bold">{post.username}</span> {post.description.length < 10 ? post.description.substring(0, 300) + "..." : post.description}
                     </div>
                     <div>
-                        {showcomment ?
+                        {post.showcommentsection ?
                             <div>
 
                                 {post.comments.map((comments) =>
@@ -124,9 +128,11 @@ function Post() {
                                         <p>{comments.text}</p>
                                     </div>
                                 )}
-                                <button onClick={() => { Setshowcomment(false) }} className="text-gray-600">Hide comments</button>
+                                <button onClick={() => { 
+                                    post.showcommentsection = false
+                                     setPosts([...post]) }} className="text-gray-600">Hide comments</button>
                             </div>
-                            : <button onClick={() => { Setshowcomment(true) }} className="text-gray-600 mt-2">{`Show all ${post.comments.length} comments`}</button>}
+                            : <button onClick={() => { post.showcommentsection =true }} className="text-gray-600 mt-2">{`Show all ${post.comments.length} comments`}</button>}
                     </div>
                     <input type="text" onChange={(e)=>{
                         Setnewcomment(e.target.value)
@@ -141,6 +147,8 @@ function Post() {
                 </div>
             ))}
         </section>
+            <Followersuggestion />
+        </div>
     );
 }
 

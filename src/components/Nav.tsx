@@ -14,7 +14,7 @@ function Nav() {
         <li><a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faHeart} /> <span className="text-lg mt-0">Notification</span><span className="bg-red-500 text-[14px] text-center rounded-[50%] w-2 h-[10px] font-bold absolute left-8"></span></p></a></li>
         <li><a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faAdd} /> <span className="text-lg mt-0">Create</span></p></a></li>
         <li><a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faChartBar} /> <span className="text-lg mt-0">Dashboard</span></p></a></li>
-        <li><a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faUser} /> <span className="text-lg mt-0">Profile</span></p></a></li> 
+        <li><a href="#"><p className="flex flex-row gap-4"><img src="/images/pic.JPG" className="w-7 h-7 rounded-[50%]" alt="profile" /><span className="text-lg mt-0">Profile</span></p></a></li> 
       </ul>
       <div className="ml-4 mt-6 flex flex-col gap-5">
         <a href="#"><p className="flex flex-row gap-4"><FontAwesomeIcon className="text-black w-6 h-6" icon={faThreads}/><span className="text-lg mt-0">Threads</span><span className="bg-red-500 text-[14px] text-center text-white rounded-[50%] w-4 h-[18px] font-bold absolute left-[33px]">5</span></p></a>
